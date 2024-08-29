@@ -1,4 +1,0 @@
-.*
-tests
-src/electron/node_modules
-src/electron/package-lock.json
