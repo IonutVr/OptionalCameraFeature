@@ -1,0 +1,19 @@
+{
+  "name": "cordova-plugin-optional-camera",
+  "version": "0.0.1",
+  "description": "A Cordova plugin to show a toast message on Android with an optional camera feature",
+  "cordova": {
+    "id": "cordova-plugin-optional-camera",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "cordova",
+    "plugin",
+    "toast",
+    "camera"
+  ],
+  "author": "Your Name",
+  "license": "Apache 2.0"
+}
