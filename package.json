@@ -1,0 +1,18 @@
+{
+  "name": "cordova-plugin-toast",
+  "version": "0.0.1",
+  "description": "A Cordova plugin to show a toast message on Android",
+  "cordova": {
+    "id": "cordova-plugin-toast",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "cordova",
+    "plugin",
+    "toast"
+  ],
+  "author": "Your Name",
+  "license": "Apache 2.0"
+}
