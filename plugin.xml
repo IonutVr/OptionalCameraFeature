@@ -27,14 +27,8 @@
     <!-- Remove Camera Permission -->
     <platform name="android">
         <config-file target="AndroidManifest.xml" parent="/*">
-            <uses-permission android:name="android.permission.BLUETOOTH" />
-		 <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
-		 <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
-            <uses-permission android:name="android.permission.CAMERA"
-                             tools:node="removeAll" />
-            <uses-feature android:name="android.hardware.camera"
-                          android:required="false"
-                          tools:node="removeAll" />
+            <uses-permission android:name="android.permission.CAMERA" tools:node="removeAll" />
+            <uses-feature android:name="android.hardware.camera" tools:node="removeAll" />
         </config-file>
     </platform>
 </plugin>
