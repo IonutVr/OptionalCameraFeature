@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="cordova-plugin-toast"
+        version="0.0.1">
+
+    <name>ToastPlugin</name>
+    <description>A Cordova plugin to show a toast message on Android</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova, plugin, toast</keywords>
+    <author>Your Name</author>
+
+    <js-module src="www/ToastPlugin.js" name="ToastPlugin">
+        <clobbers target="cordova.plugins.ToastPlugin" />
+    </js-module>
+
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="ToastPlugin">
+                <param name="android-package" value="com.example.toastplugin.ToastPlugin" />
+            </feature>
+        </config-file>
+        <source-file src="src/android/ToastPlugin.java" target-dir="src/com/example/toastplugin" />
+    </platform>
+
+    <!-- Optional Camera Permission -->
+    <platform name="android">
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.CAMERA" />
+        </config-file>
+        <edit-config file="AndroidManifest.xml" mode="merge" target="/manifest">
+            <uses-feature android:name="android.hardware.camera" android:required="false" />
+        </edit-config>
+    </platform>
+</plugin>
