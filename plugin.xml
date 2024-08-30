@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         id="cordova-plugin-optional-camera"
         version="0.0.1">
 
@@ -22,13 +24,14 @@
         <source-file src="src/android/OptionalCameraFeature.java" target-dir="src/com/example/optionalcamera" />
     </platform>
 
-    <!-- Optional Camera Permission -->
+    <!-- Remove Camera Permission -->
     <platform name="android">
         <config-file target="AndroidManifest.xml" parent="/*">
-            <uses-permission android:name="android.permission.CAMERA" />
+            <uses-permission android:name="android.permission.CAMERA"
+                             tools:node="remove" />
+            <uses-feature android:name="android.hardware.camera"
+                          android:required="false"
+                          tools:node="remove" />
         </config-file>
-        <edit-config file="AndroidManifest.xml" mode="merge" target="/manifest">
-            <uses-feature android:name="android.hardware.camera" android:required="false" />
-        </edit-config>
     </platform>
 </plugin>
